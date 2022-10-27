@@ -16,7 +16,7 @@ func ChequeoBD(next http.HandlerFunc) http.HandlerFunc {
 			http.Error(w, "Conexion perdida con la base de datos", 500)
 			return
 		}
-		Next.ServeHTTP(w, r)
+		next.ServeHTTP(w, r)
 	}
 
 }
